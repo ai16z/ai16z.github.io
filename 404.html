@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      // Get the current path and query string
+      const currentPath =
+        window.location.pathname +
+        window.location.search +
+        window.location.hash;
+
+      // Replace the base URL
+      const newBaseURL = "https://elizaos.github.io";
+      window.location.href = newBaseURL + currentPath;
+    </script>
+  </head>
+  <body>
+    <p>
+      If you are not redirected automatically,
+      <a id="redirect-link" href="#">click here</a>.
+    </p>
+    <script>
+      // Update fallback link for manual redirection
+      document.getElementById("redirect-link").href = newBaseURL + currentPath;
+    </script>
+  </body>
+</html>
